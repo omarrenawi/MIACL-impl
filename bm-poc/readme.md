@@ -3,7 +3,7 @@
 
 > Proof-of-concept implementations of anonymous credentials with decentralized issuance.
 
-# Relevant
+# Relevant Files
 The implementation of MIACL can be found in bm_poc/py/miacl.py, while the implementation of the blind multi snowblind can be found in bm_poc/py/bm_sb.py
 
 To rerun the evaluation:
