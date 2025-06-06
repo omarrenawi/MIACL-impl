@@ -1,34 +1,17 @@
-# `BM_{BLS,SB}` PoC
+# `MIACL` PoC Implementation, based on the implementation of https://github.com/k4m4/bm-poc/tree/main
 
-> Proof-of-concept implementations of anonymous tokens with decentralized issuance.
+> Proof-of-concept implementations of anonymous credentials with decentralized issuance.
 
-## Testing
+# Relevant
+The implementation of MIACL can be found in bm_poc/py/miacl.py, while the implementation of the blind multi snowblind can be found in bm_poc/py/bm_sb.py
 
-To run the smart contract tests (requires [Foundry](https://book.getfoundry.sh/getting-started/installation)), execute:
-
-```sh
-forge test
-```
-
-To run the Python tests (requires [Poetry](https://python-poetry.org/docs/)), execute:
+To rerun the evaluation:
 
 ```sh
 cd py
 poetry shell
 poetry install
 maturin develop --release
-python -m unittest *.py
-```
-
-## Benchmarks
-
-To run the smart contract gas benchmarks (requires [Foundry](https://book.getfoundry.sh/getting-started/installation) and [Poetry](https://python-poetry.org/docs/)), execute:
-
-```sh
-cd py
-poetry shell
-poetry install
-maturin develop --release
-NUM_MESSAGES=2 NUM_SIGNERS=11 python generate-fixtures.py && forge test --mc BM_BLS --gas-report
-NUM_SIGNERS=11 python generate-fixtures.py && forge test --mc BM_SB --gas-report
+python miacl.py
+python bm_sb.py
 ```
