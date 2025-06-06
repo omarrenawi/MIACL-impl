@@ -1,4 +1,5 @@
-# `MIACL` PoC Implementation, based on the implementation of https://github.com/k4m4/bm-poc/tree/main
+# `MIACL` PoC Implementation
+### Based on the implementation of https://github.com/k4m4/bm-poc/tree/main
 
 > Proof-of-concept implementations of anonymous credentials with decentralized issuance.
 
